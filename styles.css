@@ -1,0 +1,480 @@
+html {
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f0f0f0;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.nav-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1.2em; /* Reduced margin to prevent overflow */
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    background: url('assets/landing_image/landing-photo.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2.0em;
+}
+
+.landing-content {
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.landing-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
+
+.landing-content p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.landing-content .cta {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    padding: 0.6em 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.landing-content .cta:hover {
+    background: #ddd;
+}
+
+/* Portfolio Section */
+.portfolio {
+    min-height: 100vh;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 60%;
+    margin: 20px auto; /* Adds margins on larger screens */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Slides */
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots/Indicators */
+.dot-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active, .dot:hover {
+    background-color: #333;
+}
+
+/* Adjust for larger screens */
+@media (min-width: 1024px) {
+    .slideshow-container {
+        max-width: 50%;
+        margin: 40px auto; /* Increased margins for larger screens */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .portfolio h2 {
+        font-size: 1.8rem;
+    }
+
+    .slideshow-container {
+        max-width: 80%; /* Expand on smaller screens */
+        margin: 20px auto;
+    }
+}
+
+
+/* About Me Section */
+.about {
+    min-height: 100vh;
+    padding: 4em 2em;
+    background: #333;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ffffff;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-text p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+    min-height: 100vh;
+    padding: 4em 2em;
+    background: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+#contactForm {
+    max-width: 50vh;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-group label span {
+    color: red;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #555;
+}
+
+.form-feedback {
+    margin-top: 1em;
+    font-style: italic;
+    font-size: 0.9em;
+    color: green;
+}
+
+.social-links {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.social-links h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-links li {
+    margin: 0;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007acc;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+/* Chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+  }
+  
+  .chatbot-icon {
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .chatbot-window {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .chatbot-header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chatbot-close {
+    cursor: pointer;
+  }
+  
+  .chatbot-messages {
+    height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+  
+  .chatbot-message {
+    clear: both;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+    display: inline-block;
+    max-width: 80%;
+    line-height: 1.4;
+  }
+  
+  .chatbot-message.bot {
+    background: #e6e6e6;
+    float: left;
+  }
+  
+  .chatbot-message.user {
+    background: #007bff;
+    color: #fff;
+    float: right;
+  }
+  
+  .chatbot-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  
+  #chatbotInput {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  #chatbotSendBtn {
+    background: #333;
+    color: #fff;
+    border: none;
+    width: 60px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #333;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .nav-links a {
+        margin-left: 1em;
+        font-size: 0.9em;
+    }
+
+    .landing-content h1 {
+        font-size: 2em;
+    }
+
+    .landing-content p {
+        font-size: 1.2em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

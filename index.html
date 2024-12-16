@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Mu7TlTXheL7gzpB3wgeRdFId4psWk+28AqJ+FA/zhr5uQTl9zwG6P3tWTmZzb+ZYn6VSRiCsRFSR2QBL1IvTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="A personal portfolio website showcasing my work, experience, and how to contact me." />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+          <div class="navbar-container">
+            <div class="nav-logo">
+              <a href="#landing">Davor P.</a>
+            </div>
+            <div class="nav-links">
+              <a href="#portfolio">Portfolio</a>
+              <a href="#about">O meni</a>
+              <a href="#contact">Kontakt</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+
+    <!-- Landing Section -->
+    <section id="landing" class="landing">
+        <div class="landing-content">
+            <h1>Bok, ja sam Davor Petranović</h1>
+            <p>I slobodni sam umjetnik koji se bavi fotografijom i astrofotografijom</p>
+            <a href="#portfolio" class="cta">Pregledaj fotografije</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Moj portfolio</h2>
+        <p>Moja ljubav prema raznolikosti vidljiva je i kroz fotografija. One proučavaju različite tematike, bilo da je u pitanju arhitektura, biljni i životinjski svijet, ili pak astrofotografija.</p>
+        <div class="slideshow-container">
+
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="/assets/gallery/spider-photo.jpg" alt="Portfolio Image 1">
+            </div>
+        
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="/assets/gallery/colosseum-photo.jpg" alt="Portfolio Image 2">
+            </div>
+        
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="assets/gallery/nebula-photo.jpg" alt="Portfolio Image 3">
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="assets/gallery/stormy-photo.jpg" alt="Portfolio Image 4">
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+                <img src="assets/gallery/nightcity-photo.jpg" alt="Portfolio Image 5">
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide">
+                <img src="assets/gallery/sunset-photo.jpg" alt="Portfolio Image 5">
+            </div>
+        
+            <!-- Navigation Buttons -->
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        
+        <!-- Dots/Indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>        
+    </section>
+    
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <h2>O meni</h2>
+        <div class="about-content">
+            <img src="assets/about_me/self-portrait.jpg" alt="Profile Picture" class="profile-pic" />
+            <div class="about-text">
+                <p>Ja sam Davor Petranović, slobodni fotograf i astrofotograf, oduvijek fasciniran ljepotom svjetla i beskrajnim prostranstvima noćnog neba. Već dugi niz godina bilježim prizore koji me inspiriraju, nastojeći svakim kadrom ispričati jedinstvenu priču.</p>
+                <p>Fotografijom sam se počeo baviti još u ranom djetinjstvu, istražujući svijet oko sebe kroz objektiv staroga analognog fotoaparata. S vremenom sam svoju ljubav prema vizualnoj umjetnosti spojio s fascinacijom noćnim nebom, pa sam se posvetio astrofotografiji koja mi pruža zadovoljstvo hvatanja tankih niti svjetlosti iz udaljenih zvijezda i galaksija. Sloboda koju mi donosi freelance rad omogućuje mi da lutam različitim krajolicima, bilježeći sve od zore do sumraka, a kada sunce zađe, povezujem se s kozmosom i dokumentiram one trenutke koje golim okom ne možemo uvijek zapaziti. Moj cilj je, kroz moje fotografije, približiti ljudima čudesan svijet iznad naših glava i podsjetiti ih da smo dio puno veće priče.</p>
+                <p>Danas, dok i dalje istražujem nebeske dubine i zemaljske motive, nastojim razvijati svoj umjetnički izraz i uvijek učiti nešto novo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="contact">
+        <h2>Kontaktiraj me</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Ime:<span>*</span></label>
+                <input type="text" id="name" name="name" placeholder="Vaše ime" required/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:<span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required/>
+            </div>
+            <div class="form-group">
+                <label for="message">Poruka:<span>*</span></label>
+                <textarea id="message" name="message" placeholder="Vaša poruka..." required></textarea>
+            </div>
+            <button type="submit">Pošalji</button>
+            <p class="form-feedback"></p>
+        </form>
+
+        <!-- Social & Store Links -->
+        <div class="social-links">
+            <h3>Zaprati me i na ostalim mrežama</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/instagram.png" alt="Instagram"/> Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/tik-tok.png" alt="TikTok"/> TikTok</a></li>
+                <li><a href="https://yourstorename.myshopify.com" target="_blank" rel="noopener noreferrer"><img src="assets/icons/shopify.png" alt="Shopify"/> Shopify</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <div class="chatbot-icon" id="chatbotIcon">&#128172;</div>
+        
+        <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <span>Chatbot</span>
+            <span class="chatbot-close" id="chatbotClose">&times;</span>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="chatbot-message bot">Pozdrav! Kako Vam mogu pomoći?</div>
+        </div>
+        
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbotInput" placeholder="Vaše pitanje..." aria-label="Chatbot Input">
+            <button id="chatbotSendBtn">Pošalji</button>
+        </div>
+        </div>
+    </div>
+  
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Davor Petranović. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
