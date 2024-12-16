@@ -1,2 +1,3 @@
-# portfolio-website-example
-Ovo je projekt iz kolegija "Tehnologije interaktivnog weba". Zadatak projekta je bio izraditi portfolio stranicu i funkcionalnog chatbota.
+## Izrada portfolia i chatbota
+
+U sklopu projektnog zadatka izradila sam portfolio web stranicu o izmišljenoj osobi, Davoru Petranoviću koji se bavi fotografijom. Sadrži landing stranicu, portfolio (gdje se nalaze fotografije), kratku autobiografiju i kontakt informacije i mogućnosti. U sklopu toga napravljen je i chatbot koji odgovara na jednostavna pitanja. Pitanja moraju sadržati ključne riječi kao što su dostupnost, cijene i oprema kako bi odgovori na pitanja od strane chatbota bili uspješni. Korištene tehnologije su HTML i CSS. HTML i CSS predstavljaju strukturu i komponente portfolia, a JavaScript sadrži logiku o simulaciji slanju kontakt poruke i o logici kako chatbot funkcionira.
